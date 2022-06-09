@@ -1,0 +1,81 @@
+[
+    {
+        "address": "ul. 11 Listopada 37",
+        "latlon": [
+            "49.802537",
+            "19.051112"
+        ],
+        "name": "Ziko Apteka",
+        "phones": [
+            "33 484 81 53"
+        ],
+        "working_hours": [
+            "pon-pt 07:00 - 20:00",
+            "sob 07:30 - 14:30"
+        ]
+    }
+][
+    {
+        "address": "ul. 11 Listopada 37",
+        "latlon": [
+            "49.823244",
+            "19.052752"
+        ],
+        "name": "Ziko Apteka",
+        "phones": [
+            "33 484 81 55"
+        ],
+        "working_hours": [
+            "pon-pt 07:00 - 20:00",
+            "sob 07:30 - 14:30"
+        ]
+    }
+][
+    {
+        "address": "ul. 11 Listopada 37",
+        "latlon": [
+            "49.823277",
+            "19.045990"
+        ],
+        "name": "Ziko Apteka",
+        "phones": [
+            "33 484 81 49"
+        ],
+        "working_hours": [
+            "pon-pt 07:00 - 20:00",
+            "sob 07:30 - 14:30"
+        ]
+    }
+][
+    {
+        "address": "ul. 11 Listopada 37",
+        "latlon": [
+            "49.823277",
+            "19.045990"
+        ],
+        "name": "Ziko Dermo",
+        "phones": [
+            "33 484 81 50"
+        ],
+        "working_hours": [
+            "pon-pt 07:00 - 20:00",
+            "sob 07:30 - 14:30"
+        ]
+    }
+][
+    {
+        "address": "ul. 11 Listopada 37",
+        "latlon": [
+            "49.802394",
+            "19.029408"
+        ],
+        "name": "Ziko Apteka",
+        "phones": [
+            "33 484 81 48"
+        ],
+        "working_hours": [
+            "pon-pt 07:00 - 20:00",
+            "sob 07:30 - 14:30"
+        ]
+    }
+]
