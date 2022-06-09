@@ -27,8 +27,7 @@ def get_data():
         src = file.read()
 
     soup = BeautifulSoup(src, 'lxml')
-    # all_shops = soup.find_all(class_='shop')
-    all_shops = soup.find_all('body')
+    all = soup.find_all(class_='shop')
     coords = soup.find(text=re.compile('Placemark')).split()
     latlon = []
     for item in coords:
@@ -36,32 +35,31 @@ def get_data():
             latlon.append((item))
         elif '27.' in item:
             latlon.append((item))
+
     box = []
-    counter=2
-    print(len(latlon))
     for elem in range(len(latlon)):
-        while box!=2:
-            box.append(latlon[elem]+latlon[elem])
-            # latlon.remove(latlon[0])
-            # latlon.remove(latlon[0])
-    print(box)
-    #
-    #
-    # for shop in all_shops:
-    #     adress = shop.find(class_='name').text
-    #     phone = shop.find(class_='phone').text
-    #     phone = re.sub("\(*\)*\ *","", phone)
-    #     latlon = []
-    #     data.append(
-    #         {
-    #             'adress':adress,
-    #             'latlon':'???',
-    #             'name':'Мономах',
-    #             'phones': phone.split(),
-    #         }
-    #     )
-    # with open('site3.json', 'w', encoding='utf-8') as file:
-    #     json.dump(data, file, indent=4, ensure_ascii=False)
+        while len(box)!=10:
+            box.append((latlon[elem]+' '+latlon[elem+1]))
+            latlon.remove(latlon[0])
+            latlon.remove(latlon[0])
+
+
+    count = 1
+    for shop in all:
+        adress = shop.find(class_='name').text
+        phone = shop.find(class_='phone').text
+        phone = re.sub("\(*\)*\ *","", phone)
+        data.append(
+            {
+                'adress':adress,
+                'latlon': box[count],
+                'name':'Мономах',
+                'phones': phone.split(),
+            }
+        )
+        count+=1
+    with open('site3.json', 'w', encoding='utf-8') as file:
+        json.dump(data, file, indent=4, ensure_ascii=False)
 
 def main():
     get_data()

@@ -105,7 +105,6 @@ def get_data():
                 'working_hours': working_hours
             }
         )
-        print(f"{item_name}")
         print(f'[+] Обработано магазинов {counter} из {len(shops_url)}')
         counter += 1
         ### Запись собранных данных в json-файл
